@@ -5,6 +5,27 @@ entries:
       artifacthub.io/license: Apache-2.0
     apiVersion: v2
     appVersion: 0.2.0
+    created: "2023-06-07T13:10:06.756991883Z"
+    description: HoloInsight Helm chart for Kubernetes
+    digest: bcc592553c7c8deb6d9421783db7ba643e7c785863eecf2b793a3672be61f653
+    home: https://github.com/traas-stack/holoinsight
+    icon: https://github.com/traas-stack/holoinsight/raw/main/docs/logo/logo.png
+    keywords:
+    - holoinsight
+    - monitor
+    maintainers:
+    - email: xzchaoo@gmail.com
+      name: xzchaoo
+      url: https://github.com/xzchaoo
+    name: holoinsight
+    type: application
+    urls:
+    - https://github.com/xzchaoo/holoinsight-helm-charts/releases/download/holoinsight-0.2.2/holoinsight-0.2.2.tgz
+    version: 0.2.2
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+    apiVersion: v2
+    appVersion: 0.2.0
     created: "2023-06-07T13:07:41.869646623Z"
     description: HoloInsight Helm chart for Kubernetes
     digest: 8a535a9fbcd0779799864fd0d47c5489af1a1cadd29b3d41a5978196daef4419
@@ -84,6 +105,28 @@ entries:
       artifacthub.io/license: Apache-2.0
     apiVersion: v2
     appVersion: 0.2.0
+    created: "2023-06-07T13:10:06.922602934Z"
+    description: HoloInsight Agent Helm chart for Kubernetes
+    digest: a952a5908488a65d783713efc047036dd805b99f9954f71a67900ba19a2f003e
+    home: https://github.com/traas-stack/holoinsight-agent
+    icon: https://github.com/traas-stack/holoinsight/raw/main/docs/logo/logo.png
+    keywords:
+    - holoinsight
+    - holoinsight-agent
+    - monitor
+    maintainers:
+    - email: xzchaoo@gmail.com
+      name: xzchaoo
+      url: https://github.com/xzchaoo
+    name: holoinsight-agent
+    type: application
+    urls:
+    - https://github.com/xzchaoo/holoinsight-helm-charts/releases/download/holoinsight-agent-0.2.2/holoinsight-agent-0.2.2.tgz
+    version: 0.2.2
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+    apiVersion: v2
+    appVersion: 0.2.0
     created: "2023-06-07T13:07:42.016220706Z"
     description: HoloInsight Agent Helm chart for Kubernetes
     digest: 9badf78935c77cec1f4daeec782984cc3e43183f4b38d7be38cb2c0e2c211a85
@@ -132,4 +175,4 @@ entries:
     urls:
     - https://github.com/xzchaoo/holoinsight-helm-charts/releases/download/holoinsight-agent-0.0.1/holoinsight-agent-0.0.1.tgz
     version: 0.0.1
-generated: "2023-06-07T13:07:42.016242806Z"
+generated: "2023-06-07T13:10:06.922639134Z"
