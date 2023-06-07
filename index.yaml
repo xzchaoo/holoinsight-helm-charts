@@ -20,4 +20,34 @@ entries:
     urls:
     - https://github.com/xzchaoo/holoinsight-helm-charts/releases/download/holoinsight-0.1.4/holoinsight-0.1.4.tgz
     version: 0.1.4
-generated: "2023-06-07T09:52:14.711681688Z"
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2023-06-07T10:18:28.277261707Z"
+    description: HoloInsight Helm chart for Kubernetes
+    digest: e40bb1d4e3cf40437f1fcd77a089a0d0e83693cad65b8d4389c9fe99ba6672e8
+    home: https://github.com/traas-stack/holoinsight
+    icon: https://github.com/traas-stack/holoinsight/raw/main/docs/logo/logo.png
+    keywords:
+    - holoinsight
+    - monitor
+    maintainers:
+    - email: xzchaoo@gmail.com
+      name: xzchaoo
+      url: https://github.com/xzchaoo
+    name: holoinsight
+    type: application
+    urls:
+    - https://github.com/xzchaoo/holoinsight-helm-charts/releases/download/holoinsight-0.0.1/holoinsight-0.0.1.tgz
+    version: 0.0.1
+  holoinsight-agent:
+  - apiVersion: v2
+    appVersion: holoinsight-agent-0.0.1
+    created: "2023-06-07T10:18:28.396797504Z"
+    description: holoinsight helm chart
+    digest: 746ec21705e153a1f814424fb263da308c3c72db962bd82aac9c3a360aa6ca25
+    name: holoinsight-agent
+    type: application
+    urls:
+    - https://github.com/xzchaoo/holoinsight-helm-charts/releases/download/holoinsight-agent-0.0.1/holoinsight-agent-0.0.1.tgz
+    version: 0.0.1
+generated: "2023-06-07T10:18:28.396806005Z"
