@@ -12,9 +12,9 @@ the latest versions of the packages.  You can then run `helm search repo
 xzchaoo` to see the charts.
 
 To install the holoinsight chart:
-    kubectl create namespace holoinsight
-    helm install -n holoinsight-server holoinsight-server xzchaoo/holoinsight
+    kubectl create namespace holoinsight-agent
+    helm install -n holoinsight-agent holoinsight-server xzchaoo/holoinsight-agent
 
 To uninstall the chart:
 
-    helm delete -n holoinsight-server holoinsight-server
+    helm delete -n holoinsight-agent holoinsight-agent

@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: cadvisor
-  namespace: {{ .Values.namespace }}
+  namespace: {{ .Release.Namespace }}
   annotations:
     seccomp.security.alpha.kubernetes.io/pod: 'docker/default'
 spec:
@@ -35,7 +35,8 @@ spec:
         - --enable_metrics=cpu,memory,network,tcp,disk,diskIO,cpuLoad
         - --enable_load_reader=true
         #- --enable_metrics=app,cpu,disk,diskIO,memory,network,process
-        #- --docker_only                                         # 关闭 docker_only, 我们需要计算 pod 级 cgroup 指标
+        # disable docker_only, We need pod cgroup stats
+        #- --docker_only
         - --store_container_labels=false
         #- --whitelisted_container_labels=io.kubernetes.container.name,io.kubernetes.pod.name,io.kubernetes.pod.namespace
 
@@ -52,22 +53,15 @@ spec:
         - name: sys
           mountPath: /sys
           readOnly: true
-
-        # If you are using containerd, you should mount this dir.
-        - name: containerd
-          mountPath: /run/containerd
+        - name: docker
+          mountPath: /var/lib/docker
           readOnly: true
-
-{{/*        - name: docker*/}}
-{{/*          mountPath: /var/lib/docker*/}}
-{{/*          readOnly: true*/}}
-
         - name: disk
           mountPath: /dev/disk
           readOnly: true
-        - name: foo
-          mountPath: /foo
-          readOnly: true
+        {{- if .Values.cadvisor.volumeMounts }}
+        {{- toYaml .Values.cadvisor.volumeMounts | nindent 8 }}
+        {{- end }}
         ports:
         - name: http
           containerPort: 8080
@@ -84,15 +78,19 @@ spec:
       - name: sys
         hostPath:
           path: /sys
+
       - name: docker
         hostPath:
           path: /var/lib/docker
+
       - name: containerd
         hostPath:
           path: /run/k3s/containerd
+
       - name: disk
         hostPath:
           path: /dev/disk
-      - name: foo
-        hostPath:
-          path: /foo
+
+      {{- if .Values.cadvisor.volumes }}
+      {{- toYaml .Values.cadvisor.volumes | nindent 6 }}
+      {{- end }}

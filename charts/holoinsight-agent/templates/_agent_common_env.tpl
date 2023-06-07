@@ -47,7 +47,6 @@
 - name: NODE_NAME
   valueFrom:
     fieldRef:
-      #  并非物理机的hostname
       fieldPath: spec.nodeName
 - name: HI_WORKSPACE
   valueFrom:

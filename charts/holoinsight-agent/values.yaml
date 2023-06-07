@@ -42,7 +42,7 @@ cadvisorImage: registry-vpc.cn-shanghai.aliyuncs.com/holoinsight/cadvisor:v0.44.
 # cadvisorImage is the image of cadvisor used by holoinsight-agent.
 # Here is an example image, you need to set a different image according to your deployment environment.
 cadvisor:
-  image: registry-vpc.cn-shanghai.aliyuncs.com/holoinsight/cadvisor:v0.44.0
+  image: gcr.io/cadvisor/cadvisor:v0.44.0
   resources:
     requests:
       cpu: "0"
@@ -84,19 +84,6 @@ daemonagent:
       cpu: "0.25"
       memory: "256Mi"
       ephemeral-storage: "10Gi"
-
-clusteragent:
-  # enabled controls whether clusteragent is need to be deployed.
-  enabled: false
-  envs: [ ]
-  config: |
-  resources:
-    requests:
-      cpu: "0"
-      memory: "0"
-    limits:
-      cpu: "0.1"
-      memory: "256Mi"
 
 centralagent:
   # enabled controls whether centralagent is need to be deployed.

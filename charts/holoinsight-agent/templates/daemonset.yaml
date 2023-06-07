@@ -2,20 +2,17 @@ apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: daemonagent
-  namespace: {{ .Values.namespace }}
+  namespace: {{ .Release.Namespace }}
 spec:
   selector:
     matchLabels:
       app: daemonagent
-  # pod至少存活超过10s才算健康, 这个可以控制daemonset的更新速度
   minReadySeconds: {{ default 10 .Values.daemonagent.minReadySeconds }}
   updateStrategy:
     type: RollingUpdate
     rollingUpdate:
-      # 1台1台地滚动更新
       maxSurge: 1
       maxUnavailable: 0
-      # maxUnavailable: {{ default 1 .Values.daemonagent.maxUnavailable }}
   template:
     metadata:
       labels:

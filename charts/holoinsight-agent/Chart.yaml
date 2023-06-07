@@ -1,10 +1,24 @@
 apiVersion: v2
 name: holoinsight-agent
 
-version: 0.0.1
-
-appVersion: "holoinsight-agent-0.0.1"
+description: HoloInsight Agent Helm chart for Kubernetes
+keywords:
+- holoinsight
+- holoinsight-agent
+- monitor
 
 type: application
 
-description: "holoinsight helm chart"
+home: https://github.com/traas-stack/holoinsight-agent
+
+maintainers:
+- name: xzchaoo
+  email: xzchaoo@gmail.com
+  url: https://github.com/xzchaoo
+
+icon: https://github.com/traas-stack/holoinsight/raw/main/docs/logo/logo.png
+
+version: 0.2.0
+
+appVersion: "0.2.0"
+
