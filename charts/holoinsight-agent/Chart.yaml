@@ -1,0 +1,10 @@
+apiVersion: v2
+name: holoinsight-agent
+
+version: 0.0.1
+
+appVersion: "holoinsight-agent-0.0.1"
+
+type: application
+
+description: "holoinsight helm chart"
