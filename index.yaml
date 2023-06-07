@@ -2,6 +2,25 @@ apiVersion: v1
 entries:
   holoinsight:
   - apiVersion: v2
+    appVersion: 0.2.0
+    created: "2023-06-07T12:57:10.207633208Z"
+    description: HoloInsight Helm chart for Kubernetes
+    digest: 7be84f4e5606b95f859a6eaf91ece41c92ced874f6d253d3288bc1aa848c28c6
+    home: https://github.com/traas-stack/holoinsight
+    icon: https://github.com/traas-stack/holoinsight/raw/main/docs/logo/logo.png
+    keywords:
+    - holoinsight
+    - monitor
+    maintainers:
+    - email: xzchaoo@gmail.com
+      name: xzchaoo
+      url: https://github.com/xzchaoo
+    name: holoinsight
+    type: application
+    urls:
+    - https://github.com/xzchaoo/holoinsight-helm-charts/releases/download/holoinsight-0.2.0/holoinsight-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
     appVersion: 1.16.0
     created: "2023-06-07T09:52:14.711676988Z"
     description: HoloInsight Helm chart for Kubernetes
@@ -41,6 +60,26 @@ entries:
     version: 0.0.1
   holoinsight-agent:
   - apiVersion: v2
+    appVersion: 0.2.0
+    created: "2023-06-07T12:57:10.333273622Z"
+    description: HoloInsight Agent Helm chart for Kubernetes
+    digest: 0e9c11b8adfd72aa32f201e45e9252d19b5d281aeb3bdd5c527e05d116286ed3
+    home: https://github.com/traas-stack/holoinsight-agent
+    icon: https://github.com/traas-stack/holoinsight/raw/main/docs/logo/logo.png
+    keywords:
+    - holoinsight
+    - holoinsight-agent
+    - monitor
+    maintainers:
+    - email: xzchaoo@gmail.com
+      name: xzchaoo
+      url: https://github.com/xzchaoo
+    name: holoinsight-agent
+    type: application
+    urls:
+    - https://github.com/xzchaoo/holoinsight-helm-charts/releases/download/holoinsight-agent-0.2.0/holoinsight-agent-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
     appVersion: holoinsight-agent-0.0.1
     created: "2023-06-07T10:18:28.396797504Z"
     description: holoinsight helm chart
@@ -50,4 +89,4 @@ entries:
     urls:
     - https://github.com/xzchaoo/holoinsight-helm-charts/releases/download/holoinsight-agent-0.0.1/holoinsight-agent-0.0.1.tgz
     version: 0.0.1
-generated: "2023-06-07T10:18:28.396806005Z"
+generated: "2023-06-07T12:57:10.333286022Z"
