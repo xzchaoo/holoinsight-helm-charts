@@ -21,11 +21,7 @@ spec:
     spec:
       containers:
       - name: cadvisor
-        {{- if .Values.cadvisor.image }}
         image: {{ .Values.cadvisor.image }}
-        {{- else }}
-        image: {{ .Values.cadvisorImage }}
-        {{- end }}
         args:
         - --allow_dynamic_housekeeping=false
         #- --global_housekeeping_interval=1m0s
