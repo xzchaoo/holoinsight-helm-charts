@@ -35,14 +35,9 @@ agent:
 # [required]
 # cadvisorImage is the image of cadvisor used by holoinsight-agent.
 # Here is an example image, you need to set a different image according to your deployment environment.
-# [deprecated]
-cadvisorImage: registry-vpc.cn-shanghai.aliyuncs.com/holoinsight/cadvisor:v0.44.0
-
-# [required]
-# cadvisorImage is the image of cadvisor used by holoinsight-agent.
-# Here is an example image, you need to set a different image according to your deployment environment.
 cadvisor:
-  image: gcr.io/cadvisor/cadvisor:v0.44.0
+  image: registry-vpc.cn-shanghai.aliyuncs.com/holoinsight/cadvisor:v0.44.0
+  #image: gcr.io/cadvisor/cadvisor:v0.44.0
   resources:
     requests:
       cpu: "0"
@@ -50,6 +45,8 @@ cadvisor:
     limits:
       cpu: "0.25"
       memory: "256Mi"
+  volumeMounts: []
+  volumes: []
 
 server:
   registry:

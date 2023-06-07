@@ -5,18 +5,22 @@ image:
   # pullPolicy is the pullPolicy for all containers
   pullPolicy: IfNotPresent
 
+# server is config for holoinsight-server
 server:
+  # image is the holoinsight-server image, defaults to holoinsight/server:latest
   image: holoinsight/server:latest
+  # replicas defaults to 1. Production-level deployment must be set greater than 1 to achieve high availability.
   replicas: 1
   minReadySeconds: 10
   maxUnavailable: 1
+  # resources defaults to 2C4G
   resources:
     requests:
       cpu: "2"
-      memory: "2Gi"
+      memory: "4Gi"
     limits:
       cpu: "2"
-      memory: "2Gi"
+      memory: "4Gi"
   applicationYaml: |
     spring:
       datasource:
@@ -54,11 +58,19 @@ server:
       security:
         whiteHosts: server,gateway,gateway.holoinsight-server
 
+# collector is config for holoinsight-collector
 collector:
+  # enabled represents
   enabled: true
+  # image is the holoinsight-collector image, defaults holoinsight/otelcontribcol:latest
   image: holoinsight/otelcontribcol:latest
+  # replicas defaults to 1. Production-level deployment must be set greater than 1 to achieve high availability.
   replicas: 1
 
+
+# db is the config of the database that holoinsight-server depends on.
+# When deploying at production level, you should manually prepare these databases and configure them in high availability mode instead of using the database provided by this Helm Chart.
+# The database provided by this Helm Chart is only configured with a single instance and has no persistent storage. Once restarted, it means data loss.
 db:
   mysql:
     enabled: true

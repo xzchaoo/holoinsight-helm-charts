@@ -3,6 +3,8 @@ kind: ConfigMap
 metadata:
   name: holoinsight-agent-cm
   namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "chart_common_labels" . | indent 8 }}
 data:
   registryAddr: {{ .Values.server.registry.addr }}
   gatewayAddr: {{ .Values.server.gateway.addr }}

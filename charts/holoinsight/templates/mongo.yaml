@@ -16,6 +16,7 @@ spec:
       name: holoinsight-mongo
       labels:
         app.kubernetes.io/name: holoinsight-mongo
+        {{- include "chart_common_labels" . | indent 8 }}
     spec:
       restartPolicy: Always
       volumes:
@@ -46,7 +47,7 @@ spec:
           failureThreshold: 3
           successThreshold: 1
           timeoutSeconds: 10
-          periodSeconds: 10
+          periodSeconds: 3
           initialDelaySeconds: 10
         {{- if .Values.db.mongo.resources }}
         resources:

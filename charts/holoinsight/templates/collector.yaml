@@ -13,6 +13,7 @@ spec:
     metadata:
       labels:
         app.kubernetes.io/name: holoinsight-collector
+        {{- include "chart_common_labels" . | indent 8 }}
         {{- if .Values.collector.labels }}
         {{- toYaml .Values.collector.labels | nindent 8 }}
         {{- end }}
@@ -43,7 +44,7 @@ spec:
           failureThreshold: 3
           successThreshold: 1
           timeoutSeconds: 10
-          periodSeconds: 10
+          periodSeconds: 3
           initialDelaySeconds: 10
         {{- if .Values.collector.resources }}
         resources:

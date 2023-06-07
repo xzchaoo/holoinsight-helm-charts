@@ -18,6 +18,7 @@ spec:
       labels:
         app: cadvisor
         app.kubernetes.io/name: cadvisor
+        {{- include "chart_common_labels" . | indent 8 }}
     spec:
       containers:
       - name: cadvisor
@@ -78,19 +79,12 @@ spec:
       - name: sys
         hostPath:
           path: /sys
-
       - name: docker
         hostPath:
           path: /var/lib/docker
-
-      - name: containerd
-        hostPath:
-          path: /run/k3s/containerd
-
       - name: disk
         hostPath:
           path: /dev/disk
-
       {{- if .Values.cadvisor.volumes }}
       {{- toYaml .Values.cadvisor.volumes | nindent 6 }}
       {{- end }}

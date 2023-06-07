@@ -16,6 +16,7 @@ spec:
       name: holoinsight-es
       labels:
         app.kubernetes.io/name: holoinsight-es
+        {{- include "chart_common_labels" . | indent 8 }}
     spec:
       restartPolicy: Always
       containers:
@@ -34,7 +35,7 @@ spec:
           failureThreshold: 3
           successThreshold: 1
           timeoutSeconds: 10
-          periodSeconds: 10
+          periodSeconds: 3
           initialDelaySeconds: 10
         {{- if .Values.db.es.env }}
           {{- toYaml .Values.db.es.env | nindent 10 }}

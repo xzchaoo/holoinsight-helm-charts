@@ -16,6 +16,7 @@ spec:
       name: holoinsight-mysql
       labels:
         app.kubernetes.io/name: holoinsight-mysql
+        {{- include "chart_common_labels" . | indent 8 }}
     spec:
       restartPolicy: Always
       volumes:
@@ -45,7 +46,7 @@ spec:
         readinessProbe:
           tcpSocket:
             port: 3306
-          periodSeconds: 10
+          periodSeconds: 3
           timeoutSeconds: 5
           failureThreshold: 3
           successThreshold: 1
