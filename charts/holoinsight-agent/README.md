@@ -18,3 +18,7 @@ To install the holoinsight chart:
 To uninstall the chart:
 
     helm delete -n holoinsight-agent holoinsight-agent
+
+## Changelogs
+### To-0.2.2
+...
