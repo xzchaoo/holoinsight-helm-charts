@@ -20,6 +20,10 @@ To uninstall the chart:
     helm delete -n holoinsight-agent holoinsight-agent
 
 ## Changelogs
+### 0.2.5
+- cadvisor supports k3s
+- 
+
 ### To-0.2.3
 ...
 ### To-0.2.2

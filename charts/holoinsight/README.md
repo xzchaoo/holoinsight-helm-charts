@@ -20,6 +20,9 @@ To uninstall the chart:
     helm delete -n holoinsight-server holoinsight-server
 
 ## Changelogs
+### 0.2.5
+- remove mongodb
+
 ### To-0.2.3
 ...
 ### To-0.2.2
